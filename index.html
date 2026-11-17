@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS GAMING | Nintendo & PlayStation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-theme="all">
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="top-announcement">
+            <span>🔥 ENVÍOS GRATIS en tu primera compra con el código: <strong>GAMER20</strong></span>
+        </div>
+        <nav class="navbar">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fa-solid fa-gamepad logo-icon"></i>
+                <span class="logo-text">NEXUS<span>GG</span></span>
+            </div>
+
+            <!-- Platform Switcher -->
+            <div class="platform-switcher">
+                <button class="switch-btn active" data-platform="all">🌐 Todo</button>
+                <button class="switch-btn" data-platform="nintendo">🔴 Nintendo</button>
+                <button class="switch-btn" data-platform="playstation">🔵 PlayStation</button>
+            </div>
+
+            <!-- Enlaces corregidos apuntando a los HTML reales -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="juegos.html">Videojuegos</a></li>
+                <li><a href="suscripciones.html">Suscripciones</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Buscar juegos...">
+                </div>
+                <button class="cart-trigger" id="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">⚡ La Nueva Era del Gaming</div>
+                <h1>Siente el Poder del <span class="highlight">Universo Gamer</span></h1>
+                <p>Explora los mundos de Hyrule o domina las arenas competitivas con los mejores títulos y precios exclusivos.</p>
+                <div class="hero-buttons">
+                    <a href="juegos.html" class="btn-primary">Ver Catálogo Completo <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="suscripciones.html" class="btn-secondary">Explorar Pases</a>
+                </div>
+            </div>
+            <div class="hero-banner-card">
+                <div class="floating-badge">🔥 ¡Tendencia Top!</div>
+                <div class="banner-img-container">
+                    <div class="game-cover-art">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h3>Nintendo & PlayStation Hub</h3>
+                        <p>Tus juegos favoritos en un solo lugar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DESTACADOS EN HOME -->
+        <section class="section">
+            <div class="section-header">
+                <h2>🎮 Lo Más Vendido</h2>
+                <p>Los títulos favoritos elegidos por la comunidad joven</p>
+            </div>
+
+            <!-- Carrusel interactivo -->
+            <div class="carousel-container">
+                <button class="carousel-control prev" id="carousel-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="game-carousel"></div>
+                </div>
+                <button class="carousel-control next" id="carousel-next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="juegos.html" class="btn-primary">Ver todos los videojuegos en stock</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-gamepad logo-icon"></i>
+                    <span class="logo-text">NEXUS<span>GG</span></span>
+                </div>
+                <p>La tienda definitiva creada por gamers para gamers de 15 a 20 años.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="juegos.html">Videojuegos</a></li>
+                    <li><a href="suscripciones.html">Suscripciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXUS GAMING Inc. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CARRITO LATERAL -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Tu Carrito (<span id="cart-count-sidebar">0</span>)</h3>
+            <button class="close-cart" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <p class="empty-cart-msg">Tu carrito está vacío 😢</p>
+        </div>
+        <div class="cart-footer">
+            <div class="coupon-section">
+                <input type="text" id="coupon-input" placeholder="Cupón (ej. GAMER20)">
+                <button id="apply-coupon-btn">Aplicar</button>
+            </div>
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
